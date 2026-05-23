@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="kiro.jpg" alt="Kiro" width="220" />
+</p>
+
 # edu-bspwm
 
 Educational / tutorial repository for [bspwm](https://github.com/baskerville/bspwm), a tiling window manager that represents windows as the leaves of a binary tree. Part of the `~/EDU/` learning series — a working bspwm config dropped on top of a fresh Arch / Kiro install.
