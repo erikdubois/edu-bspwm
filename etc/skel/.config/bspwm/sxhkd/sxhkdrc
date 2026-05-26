@@ -407,9 +407,9 @@ super + y
 # CTRL + ALT KEYS
 #################################################################
 
-#Picom Toggle
-ctrl + alt + o
-    ~/.config/bspwm/scripts/picom-toggle.sh
+#Compositor Toggle
+super + g
+    ~/.config/bspwm/scripts/fastcompmgr-toggle.sh
 
 #################################################################
 # SUPER + KEYS
