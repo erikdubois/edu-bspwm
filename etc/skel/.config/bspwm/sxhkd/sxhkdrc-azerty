@@ -66,10 +66,6 @@ super + e
 super + w
     vivaldi-stable
 
-#Conky-toggle
-super + c
-    conky-toggle
-
 #Htop
 super + h
     urxvt 'htop task manager' -e htop
@@ -152,14 +148,6 @@ ctrl + alt + w
 #archlinux-tweak-tool
 ctrl + alt + e
     archlinux-tweak-tool
-
-#conky-rotate
-ctrl + alt + Next
-     conky-rotate -n
-
-#conky-rotate
-ctrl + alt + Prior
-    conky-rotate -p
 
 #File-Manager
 ctrl + alt + b

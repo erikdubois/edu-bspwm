@@ -1,5 +1,40 @@
 # Changelog
 
+## 2026.05.27
+
+### What Changed
+- Removed bspwm's orphaned conky bits. conky was never launched (`autostart.sh` starts fastcompmgr, and bspwm uses polybar for its bar), so the `conky-rotate` / `conky-toggle` keybinds and the `system-overview` conky config were dead weight.
+
+### Technical Details
+- `sxhkd/sxhkdrc`, `sxhkd/sxhkdrc-qwerty`, `sxhkd/sxhkdrc-azerty`: removed the two `#conky-rotate` blocks (`ctrl + alt + Next` / `Prior`). Also removed the `#Conky-toggle` block (`super + c`) from the qwerty/azerty variants (the default `sxhkdrc` had no toggle block).
+- Deleted `system-overview` (the conky config) — it was not referenced anywhere in the repo.
+
+### Files Modified
+- etc/skel/.config/bspwm/sxhkd/sxhkdrc
+- etc/skel/.config/bspwm/sxhkd/sxhkdrc-qwerty
+- etc/skel/.config/bspwm/sxhkd/sxhkdrc-azerty
+- etc/skel/.config/bspwm/system-overview (deleted)
+
+## 2026.05.26
+
+### What Changed
+- Replaced picom with **fastcompmgr** as the compositor. Boot launch and the toggle now use fastcompmgr, and the compositor-toggle keybind moved to the unified `super + g` (was `ctrl + alt + o`).
+
+### Technical Details
+- `autostart.sh`: `picom --config ~/.config/bspwm/picom.conf &` → `fastcompmgr -c &`.
+- `sxhkd/sxhkdrc` and both keymap variants (`sxhkdrc-azerty`, `sxhkdrc-qwerty`): toggle binding `ctrl + alt + o` → `super + g`, pointing at the renamed script.
+- `scripts/picom-toggle.sh` renamed to `fastcompmgr-toggle.sh` (simple on/off toggle — fastcompmgr takes no config file).
+- Deleted the now-unused `picom.conf`.
+
+### Files Modified
+- etc/skel/.config/bspwm/autostart.sh
+- etc/skel/.config/bspwm/sxhkd/sxhkdrc
+- etc/skel/.config/bspwm/sxhkd/sxhkdrc-azerty
+- etc/skel/.config/bspwm/sxhkd/sxhkdrc-qwerty
+- etc/skel/.config/bspwm/scripts/fastcompmgr-toggle.sh (created, replaces picom-toggle.sh)
+- etc/skel/.config/bspwm/scripts/picom-toggle.sh (deleted)
+- etc/skel/.config/bspwm/picom.conf (deleted)
+
 ## 2026.05.21
 
 ### What Changed
